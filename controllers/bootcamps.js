@@ -42,7 +42,8 @@ exports.createBootcamp = asyncHandler(async (req, res, next) => {
   if (publishedBootcamp && req.user.role !== 'admin') {
     return next(
       new ErrorResponse(
-        `This user with ID of ${req.user.id} has already published a bootcamp`
+        `This user with ID of ${req.user.id} has already published a bootcamp`,
+        400
       )
     );
   }
