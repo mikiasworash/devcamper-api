@@ -1,10 +1,10 @@
 # Devcamper API
 
-> Backend API for Devcamper application, which is a bootcamp directory website.
+> Backend API for Devcamper application, a bootcamp directory website.
 
 ## Usage
 
-Rename "config/config.env.env" to "config/config.env" and update the values/settings to your own.
+Rename "config/config.env.env" to "config/config.env" and update the values on your own.
 
 ## Install Dependencies
 
@@ -15,12 +15,19 @@ npm install
 ## Run App
 
 ```
-# Run in dev mode
+# To run in dev mode
 npm run dev
 
-# Run in prod mode
+# To run in prod mode
 npm start
 ```
 
-- Version: 1.0.0
-- License: MIT
+## Database Seeder
+
+```
+# Import all data from the "_data" folder and populate the database
+node seeder -i
+
+# Destroy all data from database
+node seeder -d
+```
